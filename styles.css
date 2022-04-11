@@ -1,0 +1,276 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: #060AB2;
+  font-family: 'Fredoka One', cursive;
+}
+
+.container {
+  margin: auto;
+}
+
+.timer {
+  margin: auto;
+  text-align: center;
+  color: #1c7ccc;
+  font-size: 75px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.287);
+}
+
+.list-group {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  margin-bottom: 300px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.item-group {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
+  transition: all .5s;
+  transform-style: preserve-3d;
+  transform: scale(1);
+}
+
+.item-group:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  background: #1C7CCC;
+}
+
+.back-face {
+  background-image: url('./img/js-badge.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.item-group.flip {
+  transform: rotateY(180deg);
+}
+
+/* картинки карточкам */
+
+.img-pic-0 {
+  background-image: url('./img/angular.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-1 {
+  background-image: url('./img/angular.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-2 {
+  background-image: url('./img/aurelia.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-3 {
+  background-image: url('./img/aurelia.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-4 {
+  background-image: url('./img/backbone.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-5 {
+  background-image: url('./img/backbone.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-6 {
+  background-image: url('./img/ember.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-7 {
+  background-image: url('./img/ember.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-8 {
+  background-image: url('./img/react.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-9 {
+  background-image: url('./img/react.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-10 {
+  background-image: url('./img/vue.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-11 {
+  background-image: url('./img/vue.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-12 {
+  background-image: url('./img/html.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-13 {
+  background-image: url('./img/html.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-14 {
+  background-image: url('./img/javascript.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-15 {
+  background-image: url('./img/javascript.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-16 {
+  background-image: url('./img/java.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-17 {
+  background-image: url('./img/java.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-18 {
+  background-image: url('./img/python.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.img-pic-19 {
+  background-image: url('./img/python.svg');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.final-screen {
+  position: fixed;
+  margin-top: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #060AB2;
+  border: #101397;
+  box-shadow: 0px 0px 7px #7a6b6b;
+  transition: opacity 2.3s ease-in-out;
+}
+
+.final-screen-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2.3s ease-in-out;
+}
+
+.screen-text {
+  box-shadow: none
+}
+
+.screen-btn {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  width: 300px;
+  height: 100px;
+  color: #1c7ccc;
+  background-color: #101397;
+  border: initial;
+  box-shadow: 0px 0px 7px #7a6b6b;
+  transition: box-shadow .15s ease;
+  border-radius: 15px;
+  font-size: 37px;
+  font-family: 'Fredoka One', cursive;
+}
+
+.screen-btn:hover {
+  box-shadow: 1px 1px 7px #7a6b6b;
+}
+
+.screen-btn:active {
+  box-shadow: -1px -1px 7px #7a6b6b;
+}
